@@ -1,0 +1,19 @@
+﻿  Battery.cpp
+c:\users\pc\c++practice\oop_pr_02\oop_pr_02\battery.cpp(54): warning C4018: '<': signed/unsigned mismatch
+  Display.cpp
+  Manufacturer.cpp
+c:\users\pc\c++practice\oop_pr_02\oop_pr_02\manufacturer.h(14): error C7539: 'Manufacturer': a class with user-declared constructors cannot have a member with the same name as the class
+c:\users\pc\c++practice\oop_pr_02\oop_pr_02\manufacturer.cpp(4): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\pc\c++practice\oop_pr_02\oop_pr_02\manufacturer.cpp(4): error C2063: 'Manufacturer::Manufacturer': not a function
+c:\users\pc\c++practice\oop_pr_02\oop_pr_02\manufacturer.cpp(8): error C2523: 'Manufacturer::~Manufacturer': destructor tag mismatch
+c:\users\pc\c++practice\oop_pr_02\oop_pr_02\manufacturer.cpp(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\pc\c++practice\oop_pr_02\oop_pr_02\manufacturer.cpp(9): error C2063: 'Manufacturer::Manufacturer': not a function
+c:\users\pc\c++practice\oop_pr_02\oop_pr_02\manufacturer.cpp(46): warning C4018: '<=': signed/unsigned mismatch
+c:\users\pc\c++practice\oop_pr_02\oop_pr_02\manufacturer.cpp(48): error C2039: 'manufacturer': is not a member of 'Manufacturer'
+  c:\users\pc\c++practice\oop_pr_02\oop_pr_02\manufacturer.h(5): note: see declaration of 'Manufacturer'
+c:\users\pc\c++practice\oop_pr_02\oop_pr_02\manufacturer.cpp(50): error C2039: 'manufacturer': is not a member of 'Manufacturer'
+  c:\users\pc\c++practice\oop_pr_02\oop_pr_02\manufacturer.h(5): note: see declaration of 'Manufacturer'
+  Phone.cpp
+c:\users\pc\c++practice\oop_pr_02\oop_pr_02\manufacturer.h(14): error C7539: 'Manufacturer': a class with user-declared constructors cannot have a member with the same name as the class
+  Price.cpp
+  Generating Code...
