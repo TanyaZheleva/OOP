@@ -1,0 +1,3 @@
+﻿  Main.cpp
+c:\users\pc\c++practice\oop_pr\oop_pr_06\oop_pr_06\main.cpp(5): warning C4305: 'argument': truncation from 'double' to 'float'
+  OOP_PR_06.vcxproj -> C:\Users\PC\C++PRACTICE\OOP_PR\OOP_PR_06\Debug\OOP_PR_06.exe
