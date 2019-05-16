@@ -8,7 +8,7 @@ size(strlen(_string))
 	{
 		string[i] = _string[i];
 	}
-	string[capacity] = '\0';
+	string[size] = '\0';
 }
 
 String::String() :capacity(10), size(0)
@@ -26,11 +26,10 @@ String::String(const String & old) :capacity(old.capacity),
 size(old.size)
 {
 	string = new char[capacity];
-	for (unsigned int i = 0; i < capacity; i++)
+	for (unsigned int i = 0; i <= capacity; i++)
 	{
 		string[i] = old.string[i];
 	}
-	string[size + 1] = '\0';
 }
 
 String & String::operator=(const String & rhs)
@@ -41,11 +40,10 @@ String & String::operator=(const String & rhs)
 		capacity = rhs.capacity;
 		size = rhs.size;
 		string = new char[capacity];
-		for (unsigned int i = 0; i < capacity; i++)
+		for (unsigned int i = 0; i <= capacity; i++)
 		{
 			string[i] = rhs.string[i];
 		}
-		string[size + 1] = '\0';
 	}
 	return *this;
 }
