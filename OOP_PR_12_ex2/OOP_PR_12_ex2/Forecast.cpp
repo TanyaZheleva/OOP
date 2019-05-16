@@ -97,6 +97,6 @@ std::istream & operator>>(std::istream & is, Forecast & rhs)
 	is >> rhs.place[i];
 	i++;*/
 	is >> rhs.place;
-	is >> rhs.temp;
+//	is >> rhs.temp;
 	return is;
 }

@@ -381,12 +381,16 @@ bool operator==(const char * lhs, const String & rhs)
 std::istream& operator>>(std::istream& is, const String& rhs)
 {
 	std::cout << "Enter string:";
-	is >> rhs;
-	return is;
+	return is >> rhs.string;
 }
+
 std::ostream& operator<<(std::ostream& os, const String& rhs)
 {
-	return os << rhs;
+	/*for(int i=0;i<rhs.capacity;i++)
+	{
+		os << rhs.string[i];
+	}*/
+		return os<<rhs.string;
 }
 
 unsigned int String::length() const

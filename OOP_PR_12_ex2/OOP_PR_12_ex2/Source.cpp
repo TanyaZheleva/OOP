@@ -3,18 +3,18 @@
 
 int main()
 {
-	Temperature t;
-	Temperature z(-5, 4, 10);
+	//Temperature t;
+	//Temperature z(-5, 4, 10);
 	//std::cout << (t >= z);
 
 	Forecast a;
-	Temperature b= a.getTemp();
+	//Temperature b= a.getTemp();
 	//std::cout << b;
 	//a.setPlace("Sofia");
 	std::cin >> a;
 	std::cout << a;
-	Forecast c;
-	c = a;
+	/*Forecast c;
+	c = a;*/
 	//std::cout << c.getPlace();
 	return 0;
 }
