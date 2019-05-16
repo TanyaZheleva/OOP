@@ -4,7 +4,7 @@
 class IT:public Employee
 {
 public:
-	IT();
+	//IT();
 	IT(char* _name = nullptr, int _experience = 0, int _salary = 600.0f, char* _project = nullptr);
 	~IT();
 	IT(const IT& old);

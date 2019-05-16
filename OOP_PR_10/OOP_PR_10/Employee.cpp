@@ -1,23 +1,23 @@
 #include "Employee.h"
 
 
-Employee::Employee():salary(600.0f),experience(0)
-{
-	name = new char[1];
-	name[0] = '\0';
-}
-
-//Employee::Employee(char * _name, int _experience, int _salary)
+//Employee::Employee():salary(600.0f),experience(0)
 //{
-//	int length = strlen(_name);
-//	name = new char[length + 1];
-//	for (int i = 0; i <= length; i++)
-//	{
-//		name[i] = _name[i];
-//	}
-//	this->setExperience(_experience);
-//	this->setSalary(_salary);
+//	name = new char[1];
+//	name[0] = '\0';
 //}
+
+Employee::Employee(char * _name, int _experience, float _salary)
+{
+	int length = strlen(_name);
+	name = new char[length + 1];
+	for (int i = 0; i <= length; i++)
+	{
+		name[i] = _name[i];
+	}
+	this->setExperience(_experience);
+	this->setSalary(_salary);
+}
 
 Employee::~Employee()
 {

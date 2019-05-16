@@ -1,8 +1,8 @@
 #include"IT.h"
 
-IT::IT():Employee(),project(nullptr)
-{
-}
+//IT::IT():Employee(),project(nullptr)
+//{
+//}
 
 IT::IT(char * _name, int _experience, int _salary, char * _project)
 {

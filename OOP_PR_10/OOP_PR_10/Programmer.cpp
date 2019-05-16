@@ -1,8 +1,8 @@
 #include "Programmer.h"
 
-Programmer::Programmer():IT(),language(nullptr)
-{
-}
+//Programmer::Programmer():IT(),language(nullptr)
+//{
+//}
 
 Programmer::Programmer(char * _name, int _experience, int _salary, char * _project, char * _language)
 {

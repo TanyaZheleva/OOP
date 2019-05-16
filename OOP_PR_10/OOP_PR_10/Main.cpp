@@ -1,9 +1,7 @@
-#include "Manager.h"
-#include "Programmer.h"
-#include "QA.h"
+#include "Company.h"
 
 int main()
 {
-
+	Company a;
 	return 0;
 }

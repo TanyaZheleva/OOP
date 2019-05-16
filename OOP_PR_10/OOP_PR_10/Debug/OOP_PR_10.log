@@ -1,0 +1,3 @@
+﻿  Employee.cpp
+c:\users\pc\c++practice\oop_pr\oop_pr_10\oop_pr_10\employee.cpp(19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  OOP_PR_10.vcxproj -> C:\Users\PC\C++PRACTICE\OOP_PR\OOP_PR_10\Debug\OOP_PR_10.exe
