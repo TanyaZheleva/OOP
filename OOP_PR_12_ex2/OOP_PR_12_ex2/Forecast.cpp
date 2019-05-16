@@ -1,4 +1,5 @@
 #include "Forecast.h"
+#include < iostream>
 
 Forecast::Forecast()
 {
@@ -12,7 +13,7 @@ Forecast::Forecast()
 Forecast::Forecast(const char * _place, Temperature const & _temp)
 {
 	this->setPlace(_place);
-	this->getTemp(_temp);
+	this->setTemp(_temp);
 }
 
 Forecast::Forecast(const Forecast & old)
@@ -34,4 +35,21 @@ const char * Forecast::getPlace() const
 Temperature& Forecast::getTemp() const
 {
 	return temp;
+}
+
+void Forecast::setPlace(const char * _place)
+{
+	int length = strlen(_place);
+	place = new char[length + 1];
+	for (int i = 0; i <= length; i++)
+	{
+		place[i] = _place[i];
+	}
+}
+
+void Forecast::setTemp(const Temperature & _temp)
+{
+	temp.setMin(_temp.getMin());
+	temp.setMax(_temp.getMax());
+	temp.setAvg(_temp.getAvg());
 }
