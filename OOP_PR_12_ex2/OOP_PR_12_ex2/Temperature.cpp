@@ -37,6 +37,21 @@ const int Temperature::GetAmplitude()
 	return max - min;
 }
 
+void Temperature::setMin(int _min)
+{
+	min = _min;
+}
+
+void Temperature::setMax(int _max)
+{
+	max = _max;
+}
+
+void Temperature::setAvg(int _avg)
+{
+	avg = _avg;
+}
+
 bool Temperature::operator==(const Temperature & rhs)
 {
 	if (max == rhs.max)

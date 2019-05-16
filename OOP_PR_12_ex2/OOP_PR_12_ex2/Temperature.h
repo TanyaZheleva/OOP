@@ -11,6 +11,10 @@ public:
 	const int getMax()const;
 	const int GetAmplitude();
 
+	void setMin(int _min);
+	void setMax(int _max);
+	void setAvg(int _avg);
+
 	bool operator==(const Temperature& rhs);
 	bool operator!=(const Temperature& rhs);
 	bool operator< (const Temperature& rhs);
