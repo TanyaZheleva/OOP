@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+
 class Temperature
 {
 public:
@@ -24,6 +25,7 @@ public:
 	bool operator>=(const Temperature& rhs);
 
 	friend std::ostream& operator<<(std::ostream& os, const Temperature& rhs);
+	friend std::istream& operator>>(std::istream& is, Temperature& rhs);
 
 private:
 	int min;

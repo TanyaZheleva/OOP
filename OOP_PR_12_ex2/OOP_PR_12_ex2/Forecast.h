@@ -1,6 +1,5 @@
 #pragma once
 #include"Temperature.h"
-#include < iostream>
 
 class Forecast
 {
@@ -18,6 +17,7 @@ public:
 	void UpdateIfHotter(Forecast const& F);
 
 	friend std::ostream& operator<<(std::ostream& os, const Forecast& rhs);
+	friend std::istream& operator>>(std::istream& is, Forecast& rhs);
 
 private:
 	char* place;

@@ -10,7 +10,8 @@ int main()
 	Forecast a;
 	Temperature b= a.getTemp();
 	//std::cout << b;
-	a.setPlace("Sofia");
+	//a.setPlace("Sofia");
+	std::cin >> a;
 	std::cout << a;
 	Forecast c;
 	c = a;

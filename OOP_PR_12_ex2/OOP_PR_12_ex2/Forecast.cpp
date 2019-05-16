@@ -84,6 +84,19 @@ void Forecast::UpdateIfHotter(Forecast const & _forecast)
 
 std::ostream & operator<<(std::ostream & os, const Forecast & rhs)
 {
-	return os << "Place: " << rhs.getPlace() << '\n' 
+	return os << "Place: " << rhs.getPlace() << '\n'
 		<< rhs.getTemp();
+}
+
+std::istream & operator>>(std::istream & is, Forecast & rhs)
+{
+	std::cout << "Enter place: ";
+
+	/*rhs.place = new char[10];
+	int i = 0;
+	is >> rhs.place[i];
+	i++;*/
+	is >> rhs.place;
+	is >> rhs.temp;
+	return is;
 }

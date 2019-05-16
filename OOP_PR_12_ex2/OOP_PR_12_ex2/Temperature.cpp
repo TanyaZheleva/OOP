@@ -127,3 +127,14 @@ std::ostream & operator<<(std::ostream & os, const Temperature & rhs)
 		<< "Max: " << rhs.getMax() << '\n'
 		<< "Avg: " << rhs.getAvg() << '\n';
 }
+
+std::istream & operator>>(std::istream & is, Temperature & rhs)
+{
+	std::cout << "Enter min: ";
+	is >> rhs.min;
+	std::cout << "Enter avg: ";
+	is >> rhs.avg;
+	std::cout << "Enter max: ";
+	is >> rhs.max;
+	return is;
+}
