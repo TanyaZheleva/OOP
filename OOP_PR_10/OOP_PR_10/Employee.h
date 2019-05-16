@@ -5,7 +5,7 @@ class Employee
 {
 public:
 	Employee();
-	Employee(char* _name = nullptr, int _experience = 0, int _salary = 600.0f);
+	//Employee(char* _name = nullptr, int _experience = 0, int _salary = 600.0f);
 	~Employee();
 	Employee(const Employee& old);
 	Employee& operator=(const Employee& rhs);

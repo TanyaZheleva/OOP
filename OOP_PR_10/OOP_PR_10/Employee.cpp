@@ -1,16 +1,23 @@
 #include "Employee.h"
 
 
-Employee::Employee():name(nullptr),salary(600.0f),experience(0)
+Employee::Employee():salary(600.0f),experience(0)
 {
+	name = new char[1];
+	name[0] = '\0';
 }
 
-Employee::Employee(char * _name, int _experience, int _salary)
-{
-	this->setName(_name);
-	this->setExperience(_experience);
-	this->setSalary(_salary);
-}
+//Employee::Employee(char * _name, int _experience, int _salary)
+//{
+//	int length = strlen(_name);
+//	name = new char[length + 1];
+//	for (int i = 0; i <= length; i++)
+//	{
+//		name[i] = _name[i];
+//	}
+//	this->setExperience(_experience);
+//	this->setSalary(_salary);
+//}
 
 Employee::~Employee()
 {
@@ -19,7 +26,12 @@ Employee::~Employee()
 
 Employee::Employee(const Employee & old)
 {
-	this->setName(old.getName());
+	int length = strlen(old.name);
+	name = new char[length + 1];
+	for (int i = 0; i <= length; i++)
+	{
+		name[i] = old.name[i];
+	}
 	this->setExperience(old.getExperience());
 	this->setSalary(old.getSalary());
 }
@@ -28,15 +40,16 @@ Employee & Employee::operator=(const Employee & rhs)
 {
 	if (this != &rhs)
 	{
-		this->setName(old.getName());
-		this->setExperience(old.getExperience());
-		this->setSalary(old.getSalary());
+		this->setName(rhs.getName());
+		this->setExperience(rhs.getExperience());
+		this->setSalary(rhs.getSalary());
 	}
 	return *this;
 }
 
 void Employee::setName(const char * _name)
 {
+	delete[] name;
 	int length = strlen(_name);
 	name = new char[length + 1];
 	for (int i = 0; i <=length; i++)
