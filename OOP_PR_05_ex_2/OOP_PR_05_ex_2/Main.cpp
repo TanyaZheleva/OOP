@@ -93,7 +93,7 @@ std::ostream& operator << (std::ostream& os, Matrix& matrix)
 	{
 		for (int j = 0; j < 3; j++)
 		{
-			return os<<(*matrix).getMatrix();
+			return os<< (matrix).getMatrix();
 		}
 	}
 }

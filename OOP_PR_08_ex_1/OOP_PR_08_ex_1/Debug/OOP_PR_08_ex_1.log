@@ -1,0 +1,22 @@
+﻿  Main.cpp
+c:\users\pc\c++practice\oop_pr\oop_pr_08_ex_1\oop_pr_08_ex_1\main.cpp(32): error C2131: expression did not evaluate to a constant
+  c:\users\pc\c++practice\oop_pr\oop_pr_08_ex_1\oop_pr_08_ex_1\main.cpp(32): note: failure was caused by a read of a variable outside its lifetime
+  c:\users\pc\c++practice\oop_pr\oop_pr_08_ex_1\oop_pr_08_ex_1\main.cpp(32): note: see usage of 'i'
+  c:\users\pc\c++practice\oop_pr\oop_pr_08_ex_1\oop_pr_08_ex_1\main.cpp(84): note: see reference to function template instantiation 'T moda<int>(T *,int)' being compiled
+          with
+          [
+              T=int
+          ]
+c:\users\pc\c++practice\oop_pr\oop_pr_08_ex_1\oop_pr_08_ex_1\main.cpp(32): error C2440: 'initializing': cannot convert from 'int' to 'T [i]'
+          with
+          [
+              T=int
+          ]
+  c:\users\pc\c++practice\oop_pr\oop_pr_08_ex_1\oop_pr_08_ex_1\main.cpp(32): note: There are no conversions to array types, although there are conversions to references or pointers to arrays
+c:\users\pc\c++practice\oop_pr\oop_pr_08_ex_1\oop_pr_08_ex_1\main.cpp(40): error C2563: mismatch in formal parameter list
+c:\users\pc\c++practice\oop_pr\oop_pr_08_ex_1\oop_pr_08_ex_1\main.cpp(44): error C2664: 'T max<T>(T *,int)': cannot convert argument 1 from 'T (__cdecl *)(T *,int)' to 'T *'
+          with
+          [
+              T=int
+          ]
+  c:\users\pc\c++practice\oop_pr\oop_pr_08_ex_1\oop_pr_08_ex_1\main.cpp(44): note: Context does not allow for disambiguation of overloaded function
