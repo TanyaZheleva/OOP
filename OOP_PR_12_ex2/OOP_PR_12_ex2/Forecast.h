@@ -1,5 +1,6 @@
 #pragma once
 #include"Temperature.h"
+#include < iostream>
 
 class Forecast
 {
@@ -11,7 +12,7 @@ public:
 	~Forecast();
 
 	const char* getPlace()const;
-	Temperature& getTemp()const;
+	//!!!Temperature& getTemp()const;
 	void setPlace(const char* _place);
 	void setTemp(const Temperature& _temp);
 

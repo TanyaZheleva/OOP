@@ -1,5 +1,4 @@
 #include "Forecast.h"
-#include < iostream>
 
 Forecast::Forecast()
 {
