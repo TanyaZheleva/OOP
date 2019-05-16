@@ -12,9 +12,12 @@ public:
 	~Forecast();
 
 	const char* getPlace()const;
-	//!!!Temperature& getTemp()const;
+	Temperature getTemp()const;
 	void setPlace(const char* _place);
 	void setTemp(const Temperature& _temp);
+	void UpdateIfHotter(Forecast const& F);
+
+	friend std::ostream& operator<<(std::ostream& os, const Forecast& rhs);
 
 private:
 	char* place;

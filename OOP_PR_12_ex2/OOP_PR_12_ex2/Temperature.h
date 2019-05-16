@@ -1,10 +1,11 @@
 #pragma once
-
+#include <iostream>
 class Temperature
 {
 public:
 	Temperature();
 	Temperature(int _min, int _avg, int _max);
+	//Temperature(const Temperature& old);
 	
 	const int getMin()const;
 	const int getAvg()const;
@@ -21,6 +22,9 @@ public:
 	bool operator> (const Temperature& rhs);
 	bool operator<=(const Temperature& rhs);
 	bool operator>=(const Temperature& rhs);
+
+	friend std::ostream& operator<<(std::ostream& os, const Temperature& rhs);
+
 private:
 	int min;
 	int avg;

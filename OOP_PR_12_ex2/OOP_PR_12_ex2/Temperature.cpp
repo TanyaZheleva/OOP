@@ -17,6 +17,13 @@ Temperature::Temperature(int _min, int _avg, int _max)
 	}
 }
 
+//Temperature::Temperature(const Temperature & old)
+//{
+//	min = old.min;
+//	max = old.max;
+//	avg = old.avg;
+//}
+
 const int Temperature::getMin() const
 {
 	return min;
@@ -112,4 +119,11 @@ bool Temperature::operator>=(const Temperature & rhs)
 		return false;
 	}
 	return true;
+}
+
+std::ostream & operator<<(std::ostream & os, const Temperature & rhs)
+{
+	return os<<"Min: "<<rhs.getMin()<<'\n' 
+		<< "Max: " << rhs.getMax() << '\n'
+		<< "Avg: " << rhs.getAvg() << '\n';
 }

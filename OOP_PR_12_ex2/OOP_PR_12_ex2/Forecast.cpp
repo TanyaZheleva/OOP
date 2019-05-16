@@ -17,8 +17,23 @@ Forecast::Forecast(const char * _place, Temperature const & _temp)
 
 Forecast::Forecast(const Forecast & old)
 {
-	//Temperature(old);
-	
+	setTemp(old.temp);
+	int length = strlen(old.place);
+	place = new char[length + 1];
+	for (int i = 0; i <= length; i++)
+	{
+		place[i] = old.place[i];
+	}
+}
+
+Forecast & Forecast::operator=(const Forecast & rhs)
+{
+	if (this != &rhs)
+	{
+		setTemp(rhs.temp);
+		setPlace(rhs.place);
+	}
+	return *this;
 }
 
 Forecast::~Forecast()
@@ -31,13 +46,15 @@ const char * Forecast::getPlace() const
 	return place;
 }
 
-Temperature& Forecast::getTemp() const
+Temperature Forecast::getTemp() const
 {
 	return temp;
 }
 
 void Forecast::setPlace(const char * _place)
 {
+
+	delete[] place;
 	int length = strlen(_place);
 	place = new char[length + 1];
 	for (int i = 0; i <= length; i++)
@@ -51,4 +68,22 @@ void Forecast::setTemp(const Temperature & _temp)
 	temp.setMin(_temp.getMin());
 	temp.setMax(_temp.getMax());
 	temp.setAvg(_temp.getAvg());
+}
+
+void Forecast::UpdateIfHotter(Forecast const & _forecast)
+{
+	if (_forecast.getPlace() == place)
+	{
+		if (temp < _forecast.temp)
+		{
+			setPlace(_forecast.getPlace());
+			setTemp(_forecast.temp);
+		}
+	}
+}
+
+std::ostream & operator<<(std::ostream & os, const Forecast & rhs)
+{
+	return os << "Place: " << rhs.getPlace() << '\n' 
+		<< rhs.getTemp();
 }

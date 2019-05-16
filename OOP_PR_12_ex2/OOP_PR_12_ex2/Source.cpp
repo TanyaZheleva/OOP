@@ -8,6 +8,12 @@ int main()
 	//std::cout << (t >= z);
 
 	Forecast a;
-
+	Temperature b= a.getTemp();
+	//std::cout << b;
+	a.setPlace("Sofia");
+	std::cout << a;
+	Forecast c;
+	c = a;
+	//std::cout << c.getPlace();
 	return 0;
 }
