@@ -11,7 +11,12 @@ Forecast::Forecast()
 
 Forecast::Forecast(const char * _place, Temperature const & _temp)
 {
-	this->setPlace(_place);
+	int length = strlen(_place);
+	place = new char[length + 1];
+	for (int i = 0; i <= length; i++)
+	{
+		place[i] = _place[i];
+	}
 	this->setTemp(_temp);
 }
 
@@ -30,8 +35,8 @@ Forecast & Forecast::operator=(const Forecast & rhs)
 {
 	if (this != &rhs)
 	{
-		setTemp(rhs.temp);
 		setPlace(rhs.place);
+		setTemp(rhs.temp);
 	}
 	return *this;
 }
@@ -90,13 +95,13 @@ std::ostream & operator<<(std::ostream & os, const Forecast & rhs)
 
 std::istream & operator>>(std::istream & is, Forecast & rhs)
 {
-	std::cout << "Enter place: ";
 
 	/*rhs.place = new char[10];
 	int i = 0;
 	is >> rhs.place[i];
 	i++;*/
+	is >> rhs.temp;
+	std::cout << "Enter place: ";
 	is >> rhs.place;
-//	is >> rhs.temp;
 	return is;
 }
