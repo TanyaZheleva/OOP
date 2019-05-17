@@ -14,8 +14,15 @@ public:
 	void addEmployee(const Employee& _add);
 	void leftEmployee(const Employee& _left );
 
-
-//private:
+	int getCurrent()const;
+	void printCompany()const;
+	void setCurrent(int _current);
+	Employee* getEmployees()const;
+	void fire();
+	float monthlySalaries();
+	float averageMonthlyPay();
+	bool check(const Employee& _add);
+private:
 	Employee** employees;
 	int current;
 	int size;

@@ -10,6 +10,7 @@ public:
 	bool getManual()const;
 	Employee* clone()const override;
 	void print()const override;
+	type get()const  override;
 private:
 	bool manual;
 };

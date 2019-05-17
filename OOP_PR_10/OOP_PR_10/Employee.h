@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+enum type{employee,manager,qa,programmer,it};
 
 class Employee
 {
@@ -20,7 +21,8 @@ public:
 	bool operator!= (const Employee& rhs);
 	virtual Employee* clone() const;
 	virtual void print()const;
-//private:
+	virtual type get()const;
+private:
 	char* name=nullptr;
 	int experience;
 	float salary;

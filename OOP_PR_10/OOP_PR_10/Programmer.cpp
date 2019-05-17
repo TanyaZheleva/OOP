@@ -65,3 +65,8 @@ void Programmer::print() const
 	IT::print();
 	std::cout << "\nLanguage: " << language;
 }
+
+type Programmer::get() const
+{
+	return programmer;
+}

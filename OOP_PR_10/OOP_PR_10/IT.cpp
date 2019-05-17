@@ -65,3 +65,8 @@ void IT::print() const
 Employee::print();
 	std::cout << "\nProject: " << project;
 }
+
+type IT::get() const
+{
+	return it;
+}

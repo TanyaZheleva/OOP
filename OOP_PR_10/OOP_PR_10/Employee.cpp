@@ -128,3 +128,8 @@ void Employee::print() const
 	std::cout << "\nName: " << name <<
 		"\nExperience: " << experience << "\nSalary: " << salary;
 }
+
+type Employee::get() const
+{
+	return employee;
+}

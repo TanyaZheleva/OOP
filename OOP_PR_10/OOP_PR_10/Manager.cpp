@@ -26,3 +26,8 @@ void Manager::print() const
 	Employee::print();
 	std::cout << "\nManaging: " << managing;
 }
+
+type Manager::get()const 
+{
+	return manager;
+}

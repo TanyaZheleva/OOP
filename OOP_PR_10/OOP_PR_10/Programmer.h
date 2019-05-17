@@ -14,6 +14,7 @@ public:
 
 	Employee* clone()const override;
 	void print()const override;
+	type get()const  override;
 private:
 	char* language=nullptr;
 };

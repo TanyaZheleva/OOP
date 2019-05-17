@@ -30,3 +30,8 @@ void QA::print() const
 IT::print();
 	std::cout << "\nManual: " << manual;
 }
+
+type QA::get() const
+{
+	return qa;
+}
