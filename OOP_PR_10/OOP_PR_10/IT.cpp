@@ -1,12 +1,8 @@
 #include"IT.h"
 
-//IT::IT():Employee(),project(nullptr)
-//{
-//}
-
-IT::IT(char * _name, int _experience, int _salary, char * _project)
+IT::IT(const char * _name, int _experience, float _salary, const char * _project) :
+	Employee(_name, _experience, _salary)
 {
-	Employee::Employee(_name, _experience, _salary);
 	this->setProject(_project);
 }
 
@@ -15,9 +11,14 @@ IT::~IT()
 	delete[] project;
 }
 
-IT::IT(const IT & old):Employee(old)
+IT::IT(const IT & old) :Employee(old)
 {
-	this->setProject(old.getProject());
+	int length = strlen(old.project);
+	project = new char[length + 1];
+	for (int i = 0; i <= length; i++)
+	{
+		project[i] = old.project[i];
+	}
 }
 
 IT & IT::operator=(const IT & rhs)
@@ -32,15 +33,35 @@ IT & IT::operator=(const IT & rhs)
 
 void IT::setProject(const char * _project)
 {
-	int length = strlen(_project);
-	project = new char[length + 1];
-	for (int i = 0; i <= length; i++)
+	if (_project)
 	{
-		project[i] = _project[i];
+		int length = strlen(_project);
+		delete[] project;
+		project = new char[length + 1];
+		for (int i = 0; i <= length; i++)
+		{
+			project[i] = _project[i];
+		}
+	}
+	else
+	{
+		project = new char[1];
+		project[0] = '\0';
 	}
 }
 
 const char * IT::getProject() const
 {
 	return project;
+}
+
+Employee* IT::clone() const
+{
+	return new IT(*this);
+}
+
+void IT::print() const
+{
+Employee::print();
+	std::cout << "\nProject: " << project;
 }

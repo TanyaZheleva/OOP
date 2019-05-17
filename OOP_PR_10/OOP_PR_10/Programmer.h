@@ -4,8 +4,7 @@
 class Programmer:public IT
 {
 public:
-	//Programmer();
-	Programmer(char* _name = nullptr, int _experience = 0, int _salary = 600.0f, char* _project = nullptr, char* _language = nullptr);
+	Programmer(const char* _name = "", int _experience = 0, float _salary = 600.0f, const char* _project = "", const char* _language = "");
 	~Programmer();
 	Programmer(const Programmer& old);
 	Programmer& operator=(const Programmer& rhs);
@@ -13,6 +12,8 @@ public:
 	void setLanguage(const char* _language);
 	const char* getLanguage()const;
 
+	Employee* clone()const override;
+	void print()const override;
 private:
-	char* language;
+	char* language=nullptr;
 };

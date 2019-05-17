@@ -4,11 +4,12 @@
 class QA:public IT
 {
 public:
-	QA(char* _name = nullptr, int _experience = 0, int _salary = 600.0f, char* _project = nullptr, bool _manual = false);
-
+	QA(const char* _name = "", int _experience = 0, float _salary = 600.0f, const char* _project = "", bool _manual = false);
+	QA(const QA& old);
 	void setManual(bool _manual);
 	bool getManual()const;
-
+	Employee* clone()const override;
+	void print()const override;
 private:
 	bool manual;
 };

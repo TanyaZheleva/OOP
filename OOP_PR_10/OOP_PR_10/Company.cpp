@@ -1,22 +1,25 @@
 #include "Company.h"
 
-Company::Company()
+Company::Company() :size(1),current(0)
 {
-	employees = new Employee[1];
+	employees = new Employee*[size];
+	employees[0] = new Employee;
 }
 
 Company::~Company()
 {
-	delete[] employees;
+	for (int i = 0; i < current; i++)
+	{
+		delete employees[i];
+	}
 }
 
-Company::Company(const Company & old)
+Company::Company(const Company & old):size(old.size),current(old.current)
 {
-	int length = sizeof(old);
-	employees = new Employee[length];
-	for (int i = 0; i < length; i++)
+	employees = new Employee*[size];
+	for (int i = 0; i < current; i++)
 	{
-		employees[i] = old.employees[i];
+		employees[i] = old.employees[i]->clone();
 	}
 }
 
@@ -24,13 +27,66 @@ Company & Company::operator=(const Company & rhs)
 {
 	if (this != &rhs)
 	{
-		delete[] employees;
-		int length = sizeof(rhs);
-		employees = new Employee[length];
-		for (int i = 0; i < length; i++)
+		for (int i = 0; i < current; i++)
 		{
-			employees[i] = rhs.employees[i];
+			delete employees[i];
+		}
+
+		current = rhs.current;
+		size = rhs.size;
+
+		employees = new Employee*[size];
+		for (int i = 0; i < current; i++)
+		{
+			employees[i] = rhs.employees[i]->clone();
 		}
 	}
 	return *this;
+}
+
+void Company::addEmployee(const Employee& _add)
+{
+	if (size <= current)
+	{
+	Employee** temp = new Employee*[current + 1];
+	for (int i = 0; i < current; i++)
+	{
+		temp[i] = employees[i]->clone();
+	}
+	temp[current] = _add.clone();
+	for (int i = 0; i < current; i++)
+	{
+		delete employees[i];
+	}
+	employees = temp;
+	current++;
+	size =current;
+	}
+	else
+	{
+		employees[current] = _add.clone();
+		current++;
+	}
+}
+
+void Company::leftEmployee(const Employee& _left)
+{
+	Employee** temp = new Employee*[current - 1];
+	int j = 0;
+	for (int i = 0; i < current; i++)
+	{
+		if (*employees[i] != _left)
+		{
+			temp[j] = employees[i]->clone();
+			j++;
+		}
+
+	}
+	for (int i = 0; i < current; i++)
+	{
+		delete employees[i];
+	}
+	employees = temp;
+	size--;
+	current--;
 }

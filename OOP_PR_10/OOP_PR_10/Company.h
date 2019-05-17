@@ -10,6 +10,13 @@ public:
 	~Company();
 	Company(const Company& old);
 	Company& operator=(const Company& rhs);
-private:
-	Employee* employees;
+
+	void addEmployee(const Employee& _add);
+	void leftEmployee(const Employee& _left );
+
+
+//private:
+	Employee** employees;
+	int current;
+	int size;
 };

@@ -4,9 +4,11 @@
 class Manager:public Employee
 {
 public:
-	Manager(char* _name = nullptr, int _experience = 0, int _salary = 600.0f, int _managing=1);
+	Manager(const char* _name = "", int _experience = 0, float _salary = 600.0f, int _managing=1);
 	void setManaging(int _managing);
 	int getManaging()const;
+	Employee* clone()const override;
+	void print()const override;
 private:
 	int managing;
 };

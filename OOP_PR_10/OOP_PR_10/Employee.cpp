@@ -1,20 +1,29 @@
 #include "Employee.h"
 
-
-//Employee::Employee():salary(600.0f),experience(0)
-//{
-//	name = new char[1];
-//	name[0] = '\0';
-//}
-
-Employee::Employee(char * _name, int _experience, float _salary)
+bool compare(const char* lhs, const char* rhs)
 {
-	int length = strlen(_name);
-	name = new char[length + 1];
-	for (int i = 0; i <= length; i++)
+	int length = strlen(lhs);
+	int rlength = strlen(rhs);
+	if (length == rlength)
 	{
-		name[i] = _name[i];
+		for (int i = 0; i <= length; i++)
+		{
+			if (lhs[i] != rhs[i])
+			{
+				return false;
+			}
+		}
+		return true;
 	}
+	else
+	{
+		return false;
+	}
+}
+
+Employee::Employee(const char * _name, int _experience, float _salary)
+{
+	this->setName(_name);
 	this->setExperience(_experience);
 	this->setSalary(_salary);
 }
@@ -47,14 +56,23 @@ Employee & Employee::operator=(const Employee & rhs)
 	return *this;
 }
 
-void Employee::setName(const char * _name)
+void Employee::setName(const char* _name)
 {
-	delete[] name;
-	int length = strlen(_name);
-	name = new char[length + 1];
-	for (int i = 0; i <=length; i++)
+	if (_name)
 	{
-		name[i] = _name[i];
+		int length = strlen(_name);
+		delete[] name;
+		name = new char[length + 1];
+		for (int i = 0; i < length; i++)
+		{
+			name[i] = _name[i];
+		}
+		name[length] = '\0';
+	}
+	else
+	{
+		name = new char[1];
+		name[0] = '\0';
 	}
 }
 
@@ -81,4 +99,32 @@ int Employee::getExperience() const
 float Employee::getSalary() const
 {
 	return salary;
+}
+
+bool Employee::operator!=(const Employee& rhs)
+{
+	if (compare(name, rhs.name))
+	{
+		if (experience == rhs.experience)
+		{
+			if (salary == rhs.salary)
+			{
+				return false;
+			}
+			return true;
+		}
+		return true;
+	}
+	return true;
+}
+
+Employee * Employee::clone() const
+{
+	return new Employee(*this);
+}
+
+void Employee::print() const
+{
+	std::cout << "\nName: " << name <<
+		"\nExperience: " << experience << "\nSalary: " << salary;
 }

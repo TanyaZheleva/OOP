@@ -4,8 +4,7 @@
 class Employee
 {
 public:
-	//Employee();
-	Employee(char* _name = nullptr, int _experience = 0, float _salary = 600.0f);
+	Employee(const char* _name = "", int _experience = 0, float _salary = 600.0f);
 	~Employee();
 	Employee(const Employee& old);
 	Employee& operator=(const Employee& rhs);
@@ -18,8 +17,11 @@ public:
 	int getExperience()const;
 	float getSalary()const;
 
-private:
-	char* name;
+	bool operator!= (const Employee& rhs);
+	virtual Employee* clone() const;
+	virtual void print()const;
+//private:
+	char* name=nullptr;
 	int experience;
 	float salary;
 };
