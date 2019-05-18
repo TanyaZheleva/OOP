@@ -18,9 +18,9 @@ int main()
 	//A.leftEmployee(d);
 	//A.leftEmployee(a);
 
-	/*A.fire();
+	A.fire();
 	A.printCompany();
-	std::cout << A.monthlySalaries()<<'\n';
+	/*std::cout << A.monthlySalaries()<<'\n';
 	std::cout << A.averageMonthlyPay() << '\n';*/
 
 	return 0;

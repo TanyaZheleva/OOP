@@ -1,7 +1,7 @@
 #include "Manager.h"
 
 Manager::Manager(const char * _name, int _experience,
-	float _salary, int _managing) :Employee(_name, _experience, _salary)
+	float _salary, int _productivity, int _managing) :Employee(_name, _experience, _salary,_productivity)
 {
 	this->setManaging(_managing);
 }
@@ -30,4 +30,19 @@ void Manager::print() const
 type Manager::get()const 
 {
 	return manager;
+}
+
+float Manager::work()
+{
+	int months = getExperience();
+	int productivityM = getProductivity();
+	int years = months / 12;
+	if (months < 24)
+	{
+		setProductivity(productivityM*0.75);
+	}
+	if (months > 48)
+	{
+		setProductivity((productivityM+productivityM*0.1)*years);
+	}
 }

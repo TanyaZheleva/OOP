@@ -22,6 +22,7 @@ public:
 	float monthlySalaries();
 	float averageMonthlyPay();
 	bool check(const Employee& _add);
+	
 private:
 	Employee** employees;
 	int current;

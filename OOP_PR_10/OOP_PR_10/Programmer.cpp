@@ -1,7 +1,7 @@
 #include "Programmer.h"
 
-Programmer::Programmer(const char * _name, int _experience, float _salary, const char * _project, const char * _language)
-	:IT(_name, _experience, _salary, _project)
+Programmer::Programmer(const char * _name, int _experience, float _salary, int _productivity, const char * _project, const char * _language)
+	:IT(_name, _experience, _salary,_productivity, _project)
 {
 	this->setLanguage(_language);
 }
@@ -69,4 +69,15 @@ void Programmer::print() const
 type Programmer::get() const
 {
 	return programmer;
+}
+
+float Programmer::work()
+{
+	float monthlyPay = 75;
+	int months = getExperience();
+	for (int i = 0; i < months; i++)
+	{
+		monthlyPay *= months;
+	}
+	return monthlyPay;
 }

@@ -21,11 +21,12 @@ bool compare(const char* lhs, const char* rhs)
 	}
 }
 
-Employee::Employee(const char * _name, int _experience, float _salary)
+Employee::Employee(const char * _name, int _experience, float _salary, int _productivity)
 {
 	this->setName(_name);
 	this->setExperience(_experience);
 	this->setSalary(_salary);
+	this->setProductivity(_productivity);
 }
 
 Employee::~Employee()
@@ -43,6 +44,7 @@ Employee::Employee(const Employee & old)
 	}
 	this->setExperience(old.getExperience());
 	this->setSalary(old.getSalary());
+	this->setProductivity(old.getProductivity());
 }
 
 Employee & Employee::operator=(const Employee & rhs)
@@ -52,6 +54,7 @@ Employee & Employee::operator=(const Employee & rhs)
 		this->setName(rhs.getName());
 		this->setExperience(rhs.getExperience());
 		this->setSalary(rhs.getSalary());
+		this->setProductivity(rhs.getProductivity());
 	}
 	return *this;
 }
@@ -86,6 +89,11 @@ void Employee::setSalary(float _salary)
 	salary = _salary;
 }
 
+void Employee::setProductivity(int _product)
+{
+	productivity = _product;
+}
+
 const char * Employee::getName() const
 {
 	return name;
@@ -99,6 +107,11 @@ int Employee::getExperience() const
 float Employee::getSalary() const
 {
 	return salary;
+}
+
+int Employee::getProductivity() const
+{
+	return productivity;
 }
 
 bool Employee::operator!=(const Employee& rhs)

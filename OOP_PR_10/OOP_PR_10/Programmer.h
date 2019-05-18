@@ -4,7 +4,7 @@
 class Programmer:public IT
 {
 public:
-	Programmer(const char* _name = "", int _experience = 0, float _salary = 600.0f, const char* _project = "", const char* _language = "");
+	Programmer(const char* _name = "", int _experience = 0, float _salary = 600.0f, int _productivity = 100, const char* _project = "", const char* _language = "");
 	~Programmer();
 	Programmer(const Programmer& old);
 	Programmer& operator=(const Programmer& rhs);
@@ -15,6 +15,7 @@ public:
 	Employee* clone()const override;
 	void print()const override;
 	type get()const  override;
+	float work() override;
 private:
 	char* language=nullptr;
 };

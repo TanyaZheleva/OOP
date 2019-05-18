@@ -1,7 +1,7 @@
 #include"IT.h"
 
-IT::IT(const char * _name, int _experience, float _salary, const char * _project) :
-	Employee(_name, _experience, _salary)
+IT::IT(const char * _name, int _experience, float _salary, int _productivity, const char * _project) :
+	Employee(_name, _experience, _salary,_productivity)
 {
 	this->setProject(_project);
 }
@@ -69,4 +69,18 @@ Employee::print();
 type IT::get() const
 {
 	return it;
+}
+
+float IT::work()
+{
+	if (getExperience() < 6)
+	{
+		std::cout << "Less tham 6 months of experience!";
+		return 0.0f;
+	}
+	if (getExperience() > 84)
+	{
+		
+	}
+	
 }
