@@ -41,5 +41,6 @@ std::istream & operator>>(std::istream & is, Timestamp & rhs)
 	unsigned long int _time;
 	is >> _time;
 	rhs.setValue(_time);
+	is.get();
 	return is;
 }

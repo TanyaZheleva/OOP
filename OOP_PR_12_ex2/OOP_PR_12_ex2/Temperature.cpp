@@ -136,5 +136,6 @@ std::istream & operator>>(std::istream & is, Temperature & rhs)
 	is >> rhs.avg;
 	std::cout << "Enter max: ";
 	is >> rhs.max;
+	is.get();
 	return is;
 }

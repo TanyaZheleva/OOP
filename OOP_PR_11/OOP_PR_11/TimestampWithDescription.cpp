@@ -58,14 +58,12 @@ std::istream & operator>>(std::istream & is, TWD & rhs)
 {
 	operator>>(is, (Timestamp&)rhs);
 	
-	std::cout << "Enter description: ";
-	
-	const int buffSz = 100;
+	std::cout << "Enter description: ";	
+	const int buffSz = 1000;
 	char buff[buffSz];
-
 	is.get(buff, buffSz, '\n');
-
 	rhs= TWD(-1,buff);
+	is.get();
 
 	return is;
 }

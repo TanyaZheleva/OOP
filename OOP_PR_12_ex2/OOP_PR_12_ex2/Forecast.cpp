@@ -95,13 +95,12 @@ std::ostream & operator<<(std::ostream & os, const Forecast & rhs)
 
 std::istream & operator>>(std::istream & is, Forecast & rhs)
 {
-
-	/*rhs.place = new char[10];
-	int i = 0;
-	is >> rhs.place[i];
-	i++;*/
 	is >> rhs.temp;
 	std::cout << "Enter place: ";
-	is >> rhs.place;
+	const int buffSz = 1000;
+	char buff[buffSz];
+	is.get(buff, buffSz, '\n');
+	is.get();
+	rhs.setPlace(buff);
 	return is;
 }
