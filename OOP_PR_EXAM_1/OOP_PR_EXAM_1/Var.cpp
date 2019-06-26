@@ -51,7 +51,7 @@ double Var::value()
 void Var::print()
 {
 	int length = strlen(name);
-	for (size_t i = 0; i < length; i++)
+	for (int i = 0; i < length; i++)
 	{
 		std::cout << name[i];
 	}

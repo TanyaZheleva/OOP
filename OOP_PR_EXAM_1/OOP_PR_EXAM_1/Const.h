@@ -4,6 +4,7 @@ class Const :public Expression
 {
 public:
 	Const(const double constexp);
+	virtual ~Const() {};
 	double value() override;
 	void print() override;
 	Expression* clone()const override;

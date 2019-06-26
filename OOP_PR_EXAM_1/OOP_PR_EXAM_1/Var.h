@@ -4,7 +4,7 @@ class Var :public Expression
 {
 public:
 	Var(const char* _name="",double _value=0.0);
-	~Var();
+	virtual ~Var();
 	Var (const Var& old);
 	Var& operator=(const Var& rhs);
 	void setName(const char* _name);

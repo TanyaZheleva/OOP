@@ -21,7 +21,12 @@ double Product::value()
 
 void Product::print()
 {
-	expr1->print;
+	expr1->print();
 	std::cout << " * ";
-	expr2->print;
+	expr2->print();
+}
+
+Expression * Product::clone() const
+{
+	return new Product(*this);
 }

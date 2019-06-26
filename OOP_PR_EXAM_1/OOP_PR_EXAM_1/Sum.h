@@ -5,9 +5,11 @@ class Sum:public Expression
 {
 public:
 	Sum(Expression* lhs,Expression* rhs);
-	~Sum();
+	virtual ~Sum();
 	double value() override;
 	void print()override;
+	Expression* clone()const override;
+
 private:
 	double sum;
 	Expression* expr1;

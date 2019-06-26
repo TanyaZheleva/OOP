@@ -6,9 +6,10 @@ class Product :
 {
 public:
 	Product(Expression* _expr1,Expression* _expr2);
-	~Product();
+	virtual ~Product();
 	double value() override;
 	void print()override;
+	Expression* clone()const override;
 private:
 	double product;
 	Expression* expr1;

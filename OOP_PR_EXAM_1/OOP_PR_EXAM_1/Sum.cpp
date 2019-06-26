@@ -25,4 +25,9 @@ void Sum::print()
 	expr2->print();
 }
 
+Expression * Sum::clone() const
+{
+	return new Sum(*this);
+}
+
 
