@@ -1,0 +1,37 @@
+﻿  CentralBank.cpp
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(15): error C2143: syntax error: missing ')' before '*'
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(15): error C2143: syntax error: missing ';' before '*'
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(15): error C2182: 'Observer': illegal use of type 'void'
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(15): error C2071: 'CentralBank::Observer': illegal storage class
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(15): error C2059: syntax error: ')'
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(15): error C2238: unexpected token(s) preceding ';'
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(16): error C2327: 'CentralBank::Observer': is not a type name, static, or enumerator
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(16): error C2259: 'Observer': cannot instantiate abstract class
+  c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(16): note: due to following members:
+  c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(16): note: 'void Observer::update(std::string,double)': is abstract
+  c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\observer.h(7): note: see declaration of 'Observer::update'
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(24): error C2327: 'CentralBank::Observer': is not a type name, static, or enumerator
+  ConcreteObserver.cpp
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\observer.h(7): error C2039: 'string': is not a member of 'std'
+  c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\predefined c++ types (compiler internal)(256): note: see declaration of 'std'
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\observer.h(7): error C2061: syntax error: identifier 'string'
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(15): error C2143: syntax error: missing ')' before '*'
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(15): error C2143: syntax error: missing ';' before '*'
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(15): error C2182: 'Observer': illegal use of type 'void'
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(15): error C2071: 'CentralBank::Observer': illegal storage class
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(15): error C2059: syntax error: ')'
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(15): error C2238: unexpected token(s) preceding ';'
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(16): error C2327: 'CentralBank::Observer': is not a type name, static, or enumerator
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(16): error C2259: 'Observer': cannot instantiate abstract class
+  c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(16): note: due to following members:
+  c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(16): note: 'void Observer::update(void)': is abstract
+  c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\observer.h(7): note: see declaration of 'Observer::update'
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(24): error C2327: 'CentralBank::Observer': is not a type name, static, or enumerator
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\concreteobserver.h(12): error C3668: 'ConcreteObserver::update': method with override specifier 'override' did not override any base class methods
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\concreteobserver.cpp(14): error C2352: 'CentralBank::setRate': illegal call of non-static member function
+  c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\centralbank.h(14): note: see declaration of 'CentralBank::setRate'
+  Observer.cpp
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\observer.h(7): error C2039: 'string': is not a member of 'std'
+  c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\predefined c++ types (compiler internal)(256): note: see declaration of 'std'
+c:\users\pc\c++practice\oop_pr\oop_pr_exam_2\oop_pr_exam_2\observer.h(7): error C2061: syntax error: identifier 'string'
+  Generating Code...
