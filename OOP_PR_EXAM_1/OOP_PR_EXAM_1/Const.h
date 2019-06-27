@@ -1,6 +1,6 @@
 #pragma once
 #include "Expression.h"
-class Const :public Expression
+class Const :virtual public Expression
 {
 public:
 	Const(const double constexp);

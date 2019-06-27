@@ -13,6 +13,23 @@ Product::~Product()
 	delete expr2;
 }
 
+Product::Product(const Product & old)
+{
+	product = old.product;
+	expr1 = old.expr1->clone();
+	expr2 = old.expr2->clone();
+}
+
+Product & Product::operator=(const Product & rhs)
+{
+	if (this != &rhs)
+	{
+		product = rhs.product;
+		expr1 = rhs.expr1->clone();
+		expr2 = rhs.expr2->clone();
+}
+}
+
 double Product::value()
 {
 	product = expr1->value()*expr2->value();

@@ -1,6 +1,6 @@
 #pragma once
 #include "Expression.h"
-class Var :public Expression
+class Var :virtual public Expression
 {
 public:
 	Var(const char* _name="",double _value=0.0);
