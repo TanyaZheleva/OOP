@@ -16,7 +16,7 @@ int main()
 	
 	Sum sum(pa, px);
 	
-	Expression* pSum = new Sum(sum);
+	Expression* pSum = &sum;
 	
 	Product product(pb, pSum);
 	
