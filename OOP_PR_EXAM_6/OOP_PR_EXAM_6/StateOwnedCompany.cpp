@@ -1,7 +1,7 @@
 #include "StateOwnedCompany.h"
 
 StateOwnedCompany::StateOwnedCompany(std::string _name)
-	:name(_name), sucessfulProjects(0), count(0), assignedProjects(0)
+	:Company(_name), count(0)
 {}
 
 bool StateOwnedCompany::perform(std::string project)
@@ -24,9 +24,27 @@ double StateOwnedCompany::reliabilityRate()
 	return  sucessfulProjects / assignedProjects;
 }
 
+std::string StateOwnedCompany::getName() const
+{
+	return name;
+}
+
+int StateOwnedCompany::getAssignedProjects() const
+{
+	return assignedProjects;
+}
+
 Company * StateOwnedCompany::clone()
 {
 	return new StateOwnedCompany(*this);
 }
-	
 
+type StateOwnedCompany::get()
+{
+	return stateOwnedCompany;
+}
+	
+std::ostream & operator<<(std::ostream & os, const StateOwnedCompany & company)
+{
+	return os << "state: " << company.getName() << '\n';
+}

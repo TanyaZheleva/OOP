@@ -6,12 +6,14 @@ public:
 	StateOwnedCompany(std::string _name);
 	bool perform(std::string project) override;
 	double reliabilityRate()override;
+	std::string getName()const override;
+	int getAssignedProjects()const override;
 	Company* clone() override;
+	type get() override;
+
+	friend std::ostream& operator<< (std::ostream& os, const StateOwnedCompany& company);
+
 private:
-	std::string name;
-	std::string project;
-	int sucessfulProjects;
-	int assignedProjects;
 	int count;
 };
 

@@ -145,6 +145,7 @@
     <ClInclude Include="StateOwnedCompany.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Company!.cpp" />
     <ClCompile Include="Consortium.cpp" />
     <ClCompile Include="PrivateCompany.cpp" />
     <ClCompile Include="StateOwnedCompany.cpp" />
