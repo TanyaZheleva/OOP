@@ -120,9 +120,19 @@ Company * Consortium::clone()
 
 std::ostream & operator<<(std::ostream & os, const Consortium & company)
 {
-	for (size_t i = 0; i < company.companies.size(); i++)
+	unsigned int size = company.companies.size();
+	for (size_t i = 0; i < size; i++)
 	{
-		os << company.companies[i]->clone();
+		if (company.companies[i]->get() == consortium)
+		{
+			os<<"consortiun: "<<size<<" "<<company.getName()<<'\n';
+			os << company.companies[i]->clone();
+		}
+		else
+		{
+			os << company.companies[i]->clone();
+		}
 	}
+	
 	return os;
 }
