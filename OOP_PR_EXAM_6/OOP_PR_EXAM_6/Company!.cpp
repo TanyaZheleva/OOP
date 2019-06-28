@@ -1,7 +1,7 @@
 #include "Company.h"
 
-Company::Company(std::string _name, int _assignedProjects = 0, int _sucessfulProjects = 0)
-	:name(_name)
+Company::Company(std::string _name, int _assignedProjects, int _sucessfulProjects)
+	:name(_name), assignedProjects(_assignedProjects), sucessfulProjects(_sucessfulProjects)
 {}
 
 Company::Company(const Company& old) :
@@ -10,11 +10,28 @@ Company::Company(const Company& old) :
 
 Company& Company:: operator=(const Company& rhs)
 {
-	name = rhs.name;
-	project = rhs.project;
-	sucessfulProjects = rhs.sucessfulProjects;
-	assignedProjects = rhs.assignedProjects;
+	if (this != &rhs)
+	{
+		name = rhs.name;
+		project = rhs.project;
+		sucessfulProjects = rhs.sucessfulProjects;
+		assignedProjects = rhs.assignedProjects;
+	}
+	return *this;
 }
+
+double Company::reliabilityRate()
+{
+	if (assignedProjects > 0)
+	{
+		return sucessfulProjects / assignedProjects;
+	}
+	else
+	{
+		return 0.0;
+	}
+}
+
 
 Company* Company::clone()
 {

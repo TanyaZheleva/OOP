@@ -21,10 +21,10 @@ bool PrivateCompany::perform(std::string project)
 	}
 }
 
-double PrivateCompany::reliabilityRate()
-{
-	return sucessfulProjects / assignedProjects;
-}
+//double PrivateCompany::reliabilityRate()
+//{
+//	return sucessfulProjects / assignedProjects;
+//}
 
 int PrivateCompany::getAssignedProjects() const
 {

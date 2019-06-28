@@ -5,7 +5,7 @@ class PrivateCompany :public Company
 public:
 	PrivateCompany(std::string _name,int _atribute);
 	bool perform(std::string project) override;
-	double reliabilityRate()override;
+	//double reliabilityRate()override;
 	int getAssignedProjects()const override;
 	std::string getName()const override;
 	Company* clone() override;

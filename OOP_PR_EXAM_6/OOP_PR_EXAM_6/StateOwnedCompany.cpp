@@ -11,18 +11,20 @@ bool StateOwnedCompany::perform(std::string project)
 		sucessfulProjects++;
 		assignedProjects++;
 		count = 0;
+		return true;
 	}
 	else
 	{
 		assignedProjects++;
 		count++;
+		return false;
 	}
 }
 
-double StateOwnedCompany::reliabilityRate()
-{
-	return  sucessfulProjects / assignedProjects;
-}
+//double StateOwnedCompany::reliabilityRate()
+//{
+//	return  sucessfulProjects / assignedProjects;
+//}
 
 std::string StateOwnedCompany::getName() const
 {

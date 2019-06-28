@@ -9,7 +9,7 @@ public:
 	Consortium& operator= (const Consortium& rhs);
 	
 	bool perform(std::string _project) override;
-	double reliabilityRate()override;
+//	double reliabilityRate()override;
 
 	void addCompany(Company* _add);
 	void deleteCompany(Company* _delete);

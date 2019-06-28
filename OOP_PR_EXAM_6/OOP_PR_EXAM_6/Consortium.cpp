@@ -67,10 +67,10 @@ bool Consortium::perform(std::string _project)
 	return false;
 }
 
-double Consortium::reliabilityRate()
-{
-	return sucessfulProjects / assignedProjects;
-}
+//double Consortium::reliabilityRate()
+//{
+//	return sucessfulProjects / assignedProjects;
+//}
 
 void Consortium::addCompany(Company * _add)
 {
@@ -94,7 +94,7 @@ void Consortium::printStatus() const
 	unsigned int length = companies.size();
 	for (size_t i = 0; i < length; i++)
 	{
-		std::cout << companies[i]->getName() << ": reliability " << companies[i]->reliabilityRate();
+		std::cout << companies[i]->getName() << ": reliability " << companies[i]->reliabilityRate()<<'\n';
 	}
 }
 

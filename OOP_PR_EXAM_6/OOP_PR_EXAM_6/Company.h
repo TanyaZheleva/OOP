@@ -16,7 +16,7 @@ public:
 	Company& operator=(const Company& rhs);
 	
 	virtual bool perform(std::string project) = 0;
-	virtual double reliabilityRate() = 0;
+	virtual double reliabilityRate();
 	virtual int getAssignedProjects()const = 0;
 	virtual std::string getName()const = 0;
 	virtual Company* clone();
