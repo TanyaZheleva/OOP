@@ -77,14 +77,6 @@ void MeteoStation::unregister(Observer * _remove)
 		}
 	}
 	observers.erase(observers.begin() + index);
-	/*if (index < 0)
-	{
-		observers.erase(observers.begin());
-	}
-	else
-	{
-		observers.erase(observers.begin() + index);
-	}*/
 }
 
 void MeteoStation::notify(double _temperature)

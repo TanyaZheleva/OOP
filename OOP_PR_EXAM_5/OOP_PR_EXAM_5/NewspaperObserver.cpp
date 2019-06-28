@@ -1,14 +1,16 @@
 #include "NewspaperObserver.h"
 
 NewspaperObserver::NewspaperObserver(std::string _name, std::string _city, double _temperature)
-	:name(_name), city(_city), temperature(_temperature)
+	:Observer(_name,_city,_temperature)
+	//:name(_name), city(_city), temperature(_temperature)
 {}
 
 NewspaperObserver::NewspaperObserver(const NewspaperObserver & old)
+	:Observer(old)
 {
-	name = old.name;
+	/*name = old.name;
 	city = old.city;
-	temperature = old.temperature;
+	temperature = old.temperature;*/
 }
 
 void NewspaperObserver::update(std::string _city, double _temperature)

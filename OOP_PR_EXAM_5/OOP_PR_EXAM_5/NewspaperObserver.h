@@ -8,9 +8,9 @@ public:
 	void update(std::string _city, double _temperature) override;
 	void printMeteo()const;
 	Observer* clone() override;
-private:
-	std::string name;
-	std::string city;
-	double temperature;
+//private:
+//	std::string name;
+//	std::string city;
+//	double temperature;
 };
 

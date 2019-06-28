@@ -22,12 +22,14 @@ int main()
 	three.printMeteo();
 	four.printMeteo();
 
-	BNMS.unregister(one.clone());
+	BNMS.unregister(two.clone());
 
 	BNMS.setTemperature(29);
 
-	/*one.printMeteo();
+	one.printMeteo();
 	two.printMeteo();
-	three.printMeteo();*/
+	three.printMeteo();
+	four.printMeteo();
+
 return 0;
 }
