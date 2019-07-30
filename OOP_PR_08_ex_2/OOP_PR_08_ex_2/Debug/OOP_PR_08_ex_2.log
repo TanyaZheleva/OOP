@@ -1,5 +1,0 @@
-﻿  Main.cpp
-  Sorted.cpp
-c:\users\pc\c++practice\oop_pr\oop_pr_08_ex_2\oop_pr_08_ex_2\sorted.cpp(47): error C3861: 'resize': identifier not found
-  c:\users\pc\c++practice\oop_pr\oop_pr_08_ex_2\oop_pr_08_ex_2\sorted.cpp(47): note: 'resize': function declaration must be available as none of the arguments depend on a template parameter
-  Generating Code...
