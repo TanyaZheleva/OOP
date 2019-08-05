@@ -1,2 +1,2 @@
-# OOP_PR
+# OOP
 Exercises from my OOP course at university.
