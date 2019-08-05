@@ -1,2 +1,2 @@
 # OOP_PR
-exercises form OOP course
+Exercises from my OOP course at university.
